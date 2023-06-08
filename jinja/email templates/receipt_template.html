@@ -1,0 +1,15 @@
+<html>
+<title>Receipt</title>
+
+<body>
+    <h1>Thank you for your purchase!</h1>
+    <p>Here are the details of your order:</p>
+    <ul>
+        {% for item in order.items %}
+        <li>{{ item.name }}: {{ item.price }}</li>
+        {% endfor %}
+    </ul>
+    <p>Total: {{ order.total }}</p>
+</body>
+
+</html>
